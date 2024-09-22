@@ -64,7 +64,7 @@
     
                 <div class="flex items-center">
                     <img src="./assets/coin.png" alt="">
-                    <h1 class="text-[1.1rem] font-medium ml-2 text-[#111111B3]">5500</h1>
+                    <h1 id="balance" class="text-[1.1rem] font-medium ml-2 text-[#111111B3]">5500</h1>
                     <h1 class="text-[1.1rem] font-medium ml-1 text-[#111111B3]">BDT</h1>
                 </div>
     
@@ -107,7 +107,7 @@
                     <!--content-->
                   <div class=" bg-[#1111110D] px-3 py-2 rounded-lg inline-block mb-3" >
                     <img class="inline-block" src="./assets/coin.png" alt="">
-                    <p class="text-[1rem] text-[#111111B3] inline-block">0</p>
+                    <p id="donate" class="text-[1rem] text-[#111111B3] inline-block">0</p>
                     <p class="text-[1rem] text-[#111111B3] inline-block">BDT</p>
                   </div>
 
@@ -117,8 +117,25 @@
                     The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
 
-                <input class="border border-[ #1111111A] w-full rounded-lg p-4 font-light text-[#11111166] text-[0.89rem] mb-4" type="text" placeholder="Write Donation Amount">
-                  <button class="btn bg-lemon w-full text-[1.1rem] font-semibold text-black">Donate Now</button>
+                <input id="amount-one" class="border border-[ #1111111A] w-full rounded-lg p-4 font-light text-[#11111166] text-[0.89rem] mb-4" type="text" placeholder="Write Donation Amount">
+                  <button id="btn-one" class="btn bg-lemon w-full text-[1.1rem] font-semibold text-black"  >Donate Now</button>
+
+                   <!--add modal-->
+                   
+
+                   <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box text-center">
+                      <h3 class="text-[1.5rem] font-bold ">Congrates!</h3>
+                      <div class="flex justify-center"><img class="mt-3 mb-2" src="./assets/coin.png" alt=""></div>
+                      <p class="py-4 text-[1rem] text-[#111111B3]">You Have Donated For Humankind</p>
+                      <p class="text-[1.1rem] font-semibold">Successfully</p>
+                      <div class="modal-action">
+                        <form method="dialog" class="flex justify-center w-full items-center">
+                          <button class="btn">close confirmation </button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
                 </div>
               </div>
 
@@ -140,7 +157,7 @@
                     <!--content-->
                   <div class=" bg-[#1111110D] px-3 py-2 rounded-lg inline-block mb-3" >
                     <img class="inline-block" src="./assets/coin.png" alt="">
-                    <p class="text-[1rem] text-[#111111B3] inline-block">600</p>
+                    <p id="donate-two" class="text-[1rem] text-[#111111B3] inline-block">600</p>
                     <p class="text-[1rem] text-[#111111B3] inline-block">BDT</p>
                   </div>
 
@@ -150,8 +167,25 @@
                     The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                 </p>
 
-                <input class="border border-[ #1111111A] w-full rounded-lg p-4 font-light text-[#11111166] text-[0.89rem] mb-4" type="text" placeholder="Write Donation Amount">
-                  <button class="btn bg-lemon w-full text-[1.1rem] font-semibold text-black">Donate Now</button>
+                <input id="amount-two" class="border border-[ #1111111A] w-full rounded-lg p-4 font-light text-[#11111166] text-[0.89rem] mb-4" type="text" placeholder="Write Donation Amount">
+                  <button id="btn-two" class="btn  bg-lemon w-full text-[1.1rem] font-semibold text-black" >Donate Now</button>
+                  
+
+                  <!--add modal-->
+
+                  <dialog id="my_modal_2" class="modal">
+                    <div class="modal-box text-center">
+                      <h3 class="text-[1.5rem] font-bold ">Congrates!</h3>
+                      <div class="flex justify-center"><img class="mt-3 mb-2" src="./assets/coin.png" alt=""></div>
+                      <p class="py-4 text-[1rem] text-[#111111B3]">You Have Donated For Humankind</p>
+                      <p class="text-[1.1rem] font-semibold">Successfully</p>
+                      <div class="modal-action">
+                        <form method="dialog" class="flex justify-center w-full items-center">
+                          <button class="btn">close confirmation </button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
                 </div>
               </div>
 
@@ -172,7 +206,7 @@
                             <!--content-->
                           <div class=" bg-[#1111110D] px-3 py-2 rounded-lg inline-block mb-3" >
                             <img class="inline-block" src="./assets/coin.png" alt="">
-                            <p class="text-[1rem] text-[#111111B3] inline-block">2400</p>
+                            <p id="donate-three" class="text-[1rem] text-[#111111B3] inline-block">2400</p>
                             <p class="text-[1rem] text-[#111111B3] inline-block">BDT</p>
                           </div>
         
@@ -182,8 +216,24 @@
                             The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                         </p>
         
-                        <input class="border border-[ #1111111A] w-full rounded-lg p-4 font-light text-[#11111166] text-[0.89rem] mb-4" type="text" placeholder="Write Donation Amount">
-                          <button class="btn bg-lemon w-full text-[1.1rem] font-semibold text-black">Donate Now</button>
+                        <input id="amount-three" class="border border-[ #1111111A] w-full rounded-lg p-4 font-light text-[#11111166] text-[0.89rem] mb-4" type="text" placeholder="Write Donation Amount">
+                          <button id="btn-three" class="btn bg-lemon w-full text-[1.1rem] font-semibold text-black">Donate Now</button>
+
+                           <!--add modal-->
+
+                  <dialog id="my_modal_3" class="modal">
+                    <div class="modal-box text-center">
+                      <h3 class="text-[1.5rem] font-bold ">Congrates!</h3>
+                      <div class="flex justify-center"><img class="mt-3 mb-2" src="./assets/coin.png" alt=""></div>
+                      <p class="py-4 text-[1rem] text-[#111111B3]">You Have Donated For Humankind</p>
+                      <p class="text-[1.1rem] font-semibold">Successfully</p>
+                      <div class="modal-action">
+                        <form method="dialog" class="flex justify-center w-full items-center">
+                          <button  class="btn">close confirmation </button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
                         </div>
                       </div>
         
