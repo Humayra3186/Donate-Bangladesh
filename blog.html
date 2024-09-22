@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="text-[3.29vw] sm:text-[2.5vw] md:text-[2.08vw] lg:text-[1.35vw]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+     <!--daisy ui-->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+  
+     <!--font-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  
+  
+  <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              lemon : '#B4F461'
+              
+              
+  
+            },
+            fontFamily:{
+              lexend: '"Lexend", system-ui'
+            }
+            
+          }
+        }
+      }
+    </script>
+  
+    <style>
+      .lexend{
+          font-family: "Lexend", system-ui;
+       font-optical-sizing: auto;
+       font-weight: 400;
+       font-style: normal;
+      }
+    </style>
+     
+</head>
+<body>
+
+    <header class="sticky top-0 ">
+        <div class="bg-[#f7e6c33f] pb-4 ">
+           
+            <nav class="w-10/12  mx-auto flex justify-between items-center  backdrop-blur-2xl">
+                <button id="home" class="btn bg-lemon text-black text-[1.1rem] font-semibold px-7">home</button>
+                <div class="flex justify-center items-center py-[1.4rem]">
+                    <img src="./assets/logo.png" alt="">
+                    <h1 class="hidden sm:block ml-4 text-[1.1rem] font-semibold">Donate Bangladesh</h1>
+                </div>
+    
+                <div class="flex items-center">
+                    <img src="./assets/coin.png" alt="">
+                    <h1 class="text-[1.1rem] font-medium ml-2 text-[#111111B3]">5500</h1>
+                    <h1 class="text-[1.1rem] font-medium ml-1 text-[#111111B3]">BDT</h1>
+                </div>
+    
+               
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!--main part-->
+
+    <main class="w-10/12 mx-auto ">
+
+       <div class="mb-5 mt-10">
+        <h1 class="text-[1.7rem] font-extrabold">Important FAQ</h1>
+       <img src="" alt="">
+       </div>
+
+
+      <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-[1.2rem] font-semibold">What is the Document Object Model(DOM)?</div>
+          <div class="collapse-content">
+            <p class="md:w-[70%] text-[0.89rem]">The Document Object Model (DOM) is a programming interface that represents the structure of an HTML or XML document as a tree of objects</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-[1.2rem] font-semibold">How do you select an element from the DOM?</div>
+          <div class="collapse-content">
+            <p class="md:w-[70%] text-[0.89rem]">I usually select an element by using: document.getElementById('id') </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-[1.2rem] font-semibold">What is event delegation in the context of the DOM, and why is it useful?</div>
+          <div class="collapse-content">
+            <p class="md:w-[70%] text-[0.89rem]">It refers the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements. </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-[1.2rem] font-semibold">How do you manipulate an element's attributes and styles using DOM?</div>
+          <div class="collapse-content">
+            <p class="md:w-[70%] text-[0.89rem]">An element attribute can manipulate by using: getAttribute(), setAttribute(), removeAttribute()  and can apply styles by using:  element.style.propertyName = "value"; </p>
+          </div>
+        </div>
+      </div>
+    </main>
+     
+       <!--script-->
+    <script src="./js/common.js"></script>
+    <script src="./js/blog.js"></script>
+  
+    
+</body>
+</html>
