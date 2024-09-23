@@ -7,10 +7,16 @@ document.getElementById('blog').addEventListener('click' , function(){
 
 
 
+
+
+
+
   
 
 //when click on the donate now button
 
+
+const container = document.getElementById('history-container');
 // card one
 document.getElementById('btn-one').addEventListener('click' , function(){
     let balance = getInnerText('balance')
@@ -18,13 +24,18 @@ document.getElementById('btn-one').addEventListener('click' , function(){
     let donate = getInnerText('donate');
    
     
-    if(Math.sign(amount) !== -1 && isNaN(amount) === false){
+    if(amount > 0 && isNaN(amount) === false){
+        console.log(amount)
        
-        const newDonate = amount + donate;
-        document.getElementById('donate').innerText = newDonate;
+        const newDonate = donate + amount;
+        const finalDonate = newDonate.toFixed(2);
+        document.getElementById('donate').innerText = finalDonate;
 
         const remainBalance = balance - amount;
-        document.getElementById('balance').innerText = remainBalance;
+        const finalBalance = remainBalance.toFixed(2);
+        document.getElementById('balance').innerText = finalBalance;
+
+
        
 
     }
@@ -35,6 +46,10 @@ document.getElementById('btn-one').addEventListener('click' , function(){
 
 
      my_modal_1.showModal();
+
+     
+     
+     document.getElementById('history-container').insertBefore(createHistory('amount-one','place-one') , container.firstChild)
      
 })
 
@@ -47,13 +62,15 @@ document.getElementById('btn-two').addEventListener('click' , function(){
     let donate = getInnerText('donate-two');
    
     
-    if(Math.sign(amount) !== -1 && isNaN(amount) === false){
+    if( amount > 0 && isNaN(amount) === false){
        
         const newDonate = amount + donate;
-        document.getElementById('donate-two').innerText = newDonate;
+        const finalDonate = newDonate.toFixed(2);
+        document.getElementById('donate-two').innerText = finalDonate;
 
         const remainBalance = balance - amount;
-        document.getElementById('balance').innerText = remainBalance;
+        const finalBalance = remainBalance.toFixed(2);
+        document.getElementById('balance').innerText = finalBalance;
        
 
     }
@@ -64,12 +81,14 @@ document.getElementById('btn-two').addEventListener('click' , function(){
 
 
      my_modal_1.showModal();
+
+     document.getElementById('history-container').insertBefore(createHistory('amount-two','place-two') , container.firstChild)
      
 })
 
 
 
-//card 
+//card 3
 
 document.getElementById('btn-three').addEventListener('click' , function(){
     let balance = getInnerText('balance')
@@ -77,13 +96,15 @@ document.getElementById('btn-three').addEventListener('click' , function(){
     let donate = getInnerText('donate-three');
    
     
-    if(Math.sign(amount) !== -1 && isNaN(amount) === false){
+    if(amount > 0 && isNaN(amount) === false){
        
         const newDonate = amount + donate;
-        document.getElementById('donate-three').innerText = newDonate;
+        const finalDonate = newDonate.toFixed(2);
+        document.getElementById('donate-three').innerText = finalDonate;
 
         const remainBalance = balance - amount;
-        document.getElementById('balance').innerText = remainBalance;
+        const finalBalance = remainBalance.toFixed(2);
+        document.getElementById('balance').innerText = finalBalance;
        
 
     }
@@ -94,6 +115,44 @@ document.getElementById('btn-three').addEventListener('click' , function(){
 
 
      my_modal_1.showModal();
+
+     document.getElementById('history-container').insertBefore(createHistory('amount-three','place-three') , container.firstChild)
      
+})
+
+
+
+// when the history button is clicked
+const history = document.getElementById('history');
+const donate = document.getElementById('donate-btn')
+const cardPart = document.getElementById('card-container');
+const historyPart = document.getElementById('history-container')
+
+document.getElementById('history').addEventListener('click' , function(){
+    
+
+
+    history.className = "btn shadow-none bg-lemon text-black text-[1.1rem] font-semibold px-7"
+    donate.className = "btn shadow-none bg-white text-[#111111B3] border-[1.5px] borde-[#1111114D] text-[1.1rem] font-medium px-7"
+    
+    cardPart.classList.add('hidden');
+    historyPart.classList.remove('hidden');
+
+
+
+})
+
+
+//when donate btn is clicked
+
+
+document.getElementById('donate-btn').addEventListener('click' , function(){
+
+   donate.className = "btn shadow-none bg-lemon text-black text-[1.1rem] font-semibold px-7"
+    history.className = "btn shadow-none bg-white text-[#111111B3] border-[1.5px] borde-[#1111114D] text-[1.1rem] font-medium px-7"
+
+    historyPart.classList.add('hidden');
+    cardPart.classList.remove('hidden');
+
 })
 
