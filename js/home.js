@@ -6,17 +6,12 @@ document.getElementById('blog').addEventListener('click' , function(){
 
 
 
-
-
-
-
-
   
 
 //when click on the donate now button
 
 
-const container = document.getElementById('history-container');
+
 // card one
 document.getElementById('btn-one').addEventListener('click' , function(){
     let balance = getInnerText('balance')
@@ -49,7 +44,7 @@ document.getElementById('btn-one').addEventListener('click' , function(){
 
      
      
-     document.getElementById('history-container').insertBefore(createHistory('amount-one','place-one') , container.firstChild)
+     document.getElementById('history-container').appendChild(createHistory('amount-one','place-one'))
      
 })
 
@@ -82,7 +77,9 @@ document.getElementById('btn-two').addEventListener('click' , function(){
 
      my_modal_1.showModal();
 
-     document.getElementById('history-container').insertBefore(createHistory('amount-two','place-two') , container.firstChild)
+     document.getElementById('history-container').appendChild(createHistory('amount-two','place-two'))
+
+     
      
 })
 
@@ -116,7 +113,9 @@ document.getElementById('btn-three').addEventListener('click' , function(){
 
      my_modal_1.showModal();
 
-     document.getElementById('history-container').insertBefore(createHistory('amount-three','place-three') , container.firstChild)
+
+     document.getElementById('history-container').appendChild(createHistory('amount-three','place-three'))
+
      
 })
 
