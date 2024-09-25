@@ -19,7 +19,7 @@ document.getElementById('btn-one').addEventListener('click' , function(){
     let donate = getInnerText('donate');
    
     
-    if(amount < 0 || isNaN(amount) === true  ){
+    if(amount <= 0 || isNaN(amount) === true || amount === '' ){
         alert('Invalid Donation Amount!');
         return;
        
@@ -58,7 +58,7 @@ document.getElementById('btn-two').addEventListener('click' , function(){
     let donate = getInnerText('donate-two');
    
     
-    if( amount < 0 || isNaN(amount) === true ){
+    if( amount <= 0 || isNaN(amount) === true || amount === '' ){
         alert('Invalid Donation Amount!');
         return;
         
@@ -101,7 +101,7 @@ document.getElementById('btn-three').addEventListener('click' , function(){
     let donate = getInnerText('donate-three');
    
     
-    if(amount < 0 || isNaN(amount) === true){
+    if(amount <= 0 || isNaN(amount) === true || amount === ''){
 
         alert('Invalid Donation Amount!');
         return;
