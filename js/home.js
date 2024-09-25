@@ -19,24 +19,25 @@ document.getElementById('btn-one').addEventListener('click' , function(){
     let donate = getInnerText('donate');
    
     
-    if(amount > 0 && isNaN(amount) === false){
-        console.log(amount)
+    if(amount < 0 || isNaN(amount) === true  ){
+        alert('Invalid Donation Amount!');
+        return;
        
+
+    }
+
+    else if(amount > balance){
+        alert("Insufficient balance!")
+        return;
+    }
+    else{
         const newDonate = donate + amount;
         const finalDonate = newDonate.toFixed(2);
         document.getElementById('donate').innerText = finalDonate;
 
         const remainBalance = balance - amount;
         const finalBalance = remainBalance.toFixed(2);
-        document.getElementById('balance').innerText = finalBalance;
-
-
-       
-
-    }
-    else{
-        alert('Invalid Donation Amount!');
-        return;
+        document.getElementById('balance').innerText = finalBalance; 
     }
 
 
@@ -57,8 +58,21 @@ document.getElementById('btn-two').addEventListener('click' , function(){
     let donate = getInnerText('donate-two');
    
     
-    if( amount > 0 && isNaN(amount) === false){
+    if( amount < 0 || isNaN(amount) === true ){
+        alert('Invalid Donation Amount!');
+        return;
+        
+    }
+
+    else if(amount > balance){
+        alert("Insufficient balance!")
+        return;
+    }
+
+
+    else{
        
+
         const newDonate = amount + donate;
         const finalDonate = newDonate.toFixed(2);
         document.getElementById('donate-two').innerText = finalDonate;
@@ -66,12 +80,6 @@ document.getElementById('btn-two').addEventListener('click' , function(){
         const remainBalance = balance - amount;
         const finalBalance = remainBalance.toFixed(2);
         document.getElementById('balance').innerText = finalBalance;
-       
-
-    }
-    else{
-        alert('Invalid Donation Amount!');
-        return;
     }
 
 
@@ -93,8 +101,21 @@ document.getElementById('btn-three').addEventListener('click' , function(){
     let donate = getInnerText('donate-three');
    
     
-    if(amount > 0 && isNaN(amount) === false){
+    if(amount < 0 || isNaN(amount) === true){
+
+        alert('Invalid Donation Amount!');
+        return;
        
+
+    }
+
+    else if(amount > balance){
+        alert("Insufficient balance!")
+        return;
+    }
+
+    else{
+
         const newDonate = amount + donate;
         const finalDonate = newDonate.toFixed(2);
         document.getElementById('donate-three').innerText = finalDonate;
@@ -103,11 +124,6 @@ document.getElementById('btn-three').addEventListener('click' , function(){
         const finalBalance = remainBalance.toFixed(2);
         document.getElementById('balance').innerText = finalBalance;
        
-
-    }
-    else{
-        alert('Invalid Donation Amount!');
-        return;
     }
 
 
